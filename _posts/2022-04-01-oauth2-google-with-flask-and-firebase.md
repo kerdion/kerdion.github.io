@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Google auth"
+title:  "Google oauth2 with Flask and Firebase"
 date:   2022-04-01 13:45:26 +0200
 categories: jekyll update
 ---

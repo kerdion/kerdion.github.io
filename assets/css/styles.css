@@ -1,0 +1,146 @@
+:root {
+    --black: #121212;
+    --black-1: #202020;
+    --black-2: #333333;
+    --white: #f5f5f5;
+    --white-1: #ffffff;
+    --white-2: #3333331a;
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --color: var(--white);
+    --st-element: var(--black-1);
+    --border: var(--black-2);
+}
+
+.light-theme {
+    --bg: var(--white);
+    --color: var(--black);
+    --st-element: var(--white-1);
+    --border: var(--white-2);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    background-color: var(--bg);
+    color: var(--color);
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif; 
+    transition: .5s;
+    margin: 0px;
+}
+
+
+/* theme toggle */
+.theme-toggle {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.toggle-bar {
+    width: 50px;
+    height: 24px;
+    border-radius: 20px;
+    background-color: #4d4d4d;
+    transition: .2s;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#checkbox {
+    display: none;
+}
+
+.sun,
+.moon {
+    width: 50%;
+    transition: .25s
+}
+
+.invisible-icon {
+    opacity: 0;
+}
+
+.theme-toggle-ball {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #4d4d4d;
+    border-radius: 50%;
+    background-color: #fafafa;
+    transition: .5s;
+}
+
+.ball-dark-theme {
+    transform: translateX(25px);
+}
+
+/* end theme toggle code */
+
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section div {
+    background-color: var(--st-element);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    transition: .25s;
+    box-shadow: #0000001f 0px 0 10px 0px;
+}
+
+section div:last-child {
+    margin-bottom: 0px;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--st-element);
+    box-shadow: 0 0.22em 0.27em rgb(0 0 0 / 30%);
+}
+
+footer {
+    position: sticky;
+    bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--st-element);
+    box-shadow: 0 -0.22em 0.27em rgb(0 0 0 / 30%);
+    margin-top: auto;
+    text-align: center;
+}
+
+header,
+footer {
+    transition: .25s;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+
+@media (min-width:800px) {
+    section div {
+        flex: 1 0 25%;
+    }
+}
