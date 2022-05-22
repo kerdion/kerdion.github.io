@@ -2,33 +2,32 @@
 layout: home
 ---
 
-<body class="light-theme">
+<head>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<main>
+    {{ content }}
+</main>
 
-    <main>
-        {{ content }}
-    </main>
+<script>
+    var bar = document.querySelector(".theme-toggle");
+    var ball = document.querySelector(".theme-toggle-ball");
 
-    <script>
-        var bar = document.querySelector(".theme-toggle");
-        var ball = document.querySelector(".theme-toggle-ball");
+    var sun = document.querySelector(".sun");
+    var moon = document.querySelector(".moon");
 
-        var sun = document.querySelector(".sun");
-        var moon = document.querySelector(".moon");
+    bar.addEventListener("click", () => {
+        var checkbox = document.querySelector("#checkbox");
 
-        bar.addEventListener("click", () => {
-            var checkbox = document.querySelector("#checkbox");
+        ball.classList.toggle("ball-dark-theme")
+        document.querySelector("body").classList.toggle("dark-theme")
 
-            ball.classList.toggle("ball-dark-theme")
-            document.querySelector("body").classList.toggle("dark-theme")
+        document.querySelector("body").classList.toggle("light-theme")
 
-            document.querySelector("body").classList.toggle("light-theme")
+        sun.classList.toggle("invisible-icon");
+        moon.classList.toggle("invisible-icon");
 
-            sun.classList.toggle("invisible-icon");
-            moon.classList.toggle("invisible-icon");
+        checkbox.checked = !checkbox.checked
 
-            checkbox.checked = !checkbox.checked
-
-        });
-    </script>
-
-</body>
+    });
+</script>
