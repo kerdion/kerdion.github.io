@@ -3,19 +3,4 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: my-default
-title: Home
 ---
-
-<article>
-    {% for post in site.posts %}
-
-    <a href="{{ post.url | relative_url }}">
-        <section>
-            <div>
-                <h1>{{ post.title }}</h1>
-            </div>
-
-        </section>
-    </a>
-    {% endfor %}
-</article>
