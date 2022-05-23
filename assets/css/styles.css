@@ -16,10 +16,15 @@ body {
     font-family: 'Titillium Web', Arial, Helvetica, sans-serif; 
     transition: .5s;
     margin: 0px;
+    font-size: 1.3rem;
 }
 
 .post-link {
     color: var(--white);
+}
+
+a {
+    color: var(--accent);
 }
 
 a:visited {
@@ -31,22 +36,18 @@ a:hover {
     color: var(--accent);
 }
 
-.site-nav {
-    background-color: var(--black-1);
-    border: 1px solid var(--black-2);
-    color: var(--accent);
-}
 
-.site-nav .menu-icon > svg {
-    fill: var(--accent);
-}
 
 .site-nav .page-link {
-    color: var(--accent);
+    color: var(--white);
 }
 
 .site-title, .site-title:visited {
     color: var(--white);
+}
+
+.site-title:hover{
+    color: var(--accent);
 }
 
 section {
@@ -81,6 +82,10 @@ footer {
     transition: .25s;
 }
 
+.post-title {
+    font-size: 4rem;
+}
+
 
 @media (min-width:800px) {
     section div {
@@ -88,8 +93,21 @@ footer {
     }
 }
 
-.page-heading {
-    color: rebeccapurple !important;
+@media screen and (max-width: 600px) {
+
+    .site-nav .menu-icon > svg {
+        fill: var(--accent);
+    }
+
+    .site-nav {
+       border: 1px solid var(--accent);
+       border-radius: 5px;
+       background-color: var(--black);
+    }
+
+    .post-title {
+        font-size: 3rem !important;
+    }
 }
 
 
