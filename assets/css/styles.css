@@ -1,14 +1,15 @@
 :root {
-    --black: #121212;
-    --black-1: #202020;
-    --black-2: #333333;
+    --black: #1A1A2E;
+    --black-1: #16213E;
+    --black-2: #0F3460;
     --white: #f5f5f5;
     --white-1: #ffffff;
     --white-2: #3333331a;
+    --accent: #E94560;
 }
 
 body {
-    background-color: var(--black-1);
+    background-color: var(--black);
     color: var(--white);
     --st-element: var(--black-1);
     --border: var(--black-2);
@@ -17,7 +18,34 @@ body {
     margin: 0px;
 }
 
-.site-nav .page-link, .site-title, .site-title:visited {
+.post-link {
+    color: var(--white);
+}
+
+a:visited {
+    color: var(--white);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.site-nav {
+    background-color: var(--black-1);
+    border: 1px solid var(--black-2);
+    color: var(--accent);
+}
+
+.site-nav .menu-icon > svg {
+    fill: var(--accent);
+}
+
+.site-nav .page-link {
+    color: var(--accent);
+}
+
+.site-title, .site-title:visited {
     color: var(--white);
 }
 
@@ -41,25 +69,16 @@ section div:last-child {
 
 
 footer {
-    position: sticky;
-    bottom: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--st-element);
     box-shadow: 0 -0.22em 0.27em rgb(0 0 0 / 30%);
     margin-top: auto;
-    text-align: center;
 }
 
 header,
 footer {
     transition: .25s;
-}
-
-main {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100%;
 }
 
 
@@ -72,8 +91,6 @@ main {
 .page-heading {
     color: rebeccapurple !important;
 }
-
-
 
 
 /* code block style */
