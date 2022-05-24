@@ -10,7 +10,6 @@
 
 body {
     background-color: var(--black);
-    height: 1000px;
     color: var(--white);
     --st-element: var(--black-1);
     --border: var(--black-2);
