@@ -47,9 +47,10 @@ a:hover {
 .site-header {
     position: sticky;
     top: 0px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 1px 20px -0.3em black;
+    box-shadow: 0 -8px 40px -0.3em #495e9f;
     border: none;
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
 }
 
 section {
