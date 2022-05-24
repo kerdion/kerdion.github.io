@@ -10,6 +10,7 @@
 
 body {
     background-color: var(--black);
+    background-image: url(https://media.istockphoto.com/photos/chaotic-black-low-poly-surface-abstract-3d-render-picture-id944880340?b=1&k=20&m=944880340&s=170667a&w=0&h=TEeHm7H-f1GBjv9c0Ai6iAx3mHqAPLX_UNtz0-tOUms=);
     color: var(--white);
     --st-element: var(--black-1);
     --border: var(--black-2);
@@ -55,6 +56,7 @@ a:hover {
     border: none;
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 12px );
+    z-index: 2;
 }
 
 section {
@@ -76,12 +78,12 @@ section div:last-child {
 }
 
 
-footer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: var(--st-element);
-    box-shadow: 0 -0.22em 0.27em rgb(0 0 0 / 30%);
+.site-footer {
+    background-color: transparent;
+    box-shadow: 0 6px 40px -0.3em #495e9f;
     margin-top: auto;
+    backdrop-filter: blur(10px);
+    border-top: none;
 }
 
 header,
@@ -91,6 +93,15 @@ footer {
 
 .post-title {
     font-size: 4rem;
+}
+
+.post-content {
+    margin-bottom: 30px;
+    border: 1px solid #ffffff1f;
+    ;padding: 5px 15px;
+    backdrop-filter: blur(10px);
+    background: #2828284d;
+    border-radius: 10px;
 }
 
 
@@ -139,8 +150,16 @@ footer {
 
 /* code block style */
 .highlighter-rouge .highlight, pre, code {
-    background-color: var(--black-1);
+    background: none;
     color: var(--white);
+    border: none;
+}
+
+.highlight {
+    border-radius: 10px !important;
+    box-shadow: 0px 10px 20px -10px black;
+    backdrop-filter: blur(10px);
+    background: #ffffff03 !important;
 }
 
 .highlight .kn {
@@ -165,5 +184,9 @@ footer {
 
 .highlight .c1 {
     color: #30912a;
+}
+
+.highlight .nt {
+    color: #2e86b3;
 }
 
