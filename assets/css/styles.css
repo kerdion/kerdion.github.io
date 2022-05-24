@@ -10,6 +10,7 @@
 
 body {
     background-color: var(--black);
+    height: 1000px;
     color: var(--white);
     --st-element: var(--black-1);
     --border: var(--black-2);
@@ -23,20 +24,14 @@ body {
     color: var(--white);
 }
 
-a {
+a, a:visited  {
     color: var(--accent);
-}
-
-a:visited {
-    color: var(--white);
 }
 
 a:hover {
     text-decoration: none;
     color: var(--accent);
 }
-
-
 
 .site-nav .page-link {
     color: var(--white);
@@ -48,6 +43,14 @@ a:hover {
 
 .site-title:hover{
     color: var(--accent);
+}
+
+.site-header {
+    position: sticky;
+    top: 0px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 20px -0.3em black;
+    border: none;
 }
 
 section {
