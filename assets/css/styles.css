@@ -163,6 +163,7 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur( 10px );
     background: #ffffff03 !important;
+    border-top: 1px solid #ffffff1c;
 }
 
 .highlight .kn {

@@ -1,0 +1,161 @@
+---
+layout: my-post
+title: "How to add shapes using CSS in HTML"
+date: 2022-05-23 14:25
+categories: jekyll update
+---
+
+<style>
+    body {
+        background: linear-gradient(90deg, #222835, #121722) !important;
+    }
+
+    .drop {
+        background: linear-gradient(359deg, black, #bf89ff21);
+        backdrop-filter: blur(10px);
+        border-top: 3px solid #47465c;
+        box-shadow: 0px 20px 20px -7px rgb(0 0 0 / 20%);
+        position: absolute;
+        transition: all 0.2s ease;
+        border-radius: 50%;
+        min-width: 15vw;
+        min-height: 15vw;
+    }
+
+    .drop-1 {
+        height: 50vh;
+        width: 50vh;
+        top: 36vh;
+        left: 10vw;
+    }
+
+    .drop-2 {
+        height: 20vh;
+        width: 20vh;
+        bottom: -100vh;
+        right: 8vw;
+    }
+
+    .drop-3 {
+        height: 35vh;
+        width: 35vh;
+        bottom: -50vh;
+        right: 5vw;
+        
+    }
+
+    .drop-4 {
+        height: 20vh;
+        width: 20vh;
+        bottom: -80vh;
+        left: 25vw;
+    }
+
+    .drop-5 {
+        bottom: 1vh;
+        left: 50vw;
+        
+    }
+</style>
+
+<script>
+    // create drops div element parent
+    const drops = document.createElement('div');
+    drops.classList.add('drops');
+
+    // create 5 new elements
+    const elem1 = document.createElement('div');
+    const elem2 = document.createElement('div');
+    const elem3 = document.createElement('div');
+    const elem4 = document.createElement('div');
+    const elem5 = document.createElement('div');
+
+    // add class 'drop drop-n' to n elements
+    elem1.classList.add('drop', 'drop-1');
+    elem2.classList.add('drop', 'drop-2');
+    elem3.classList.add('drop', 'drop-3');
+    elem4.classList.add('drop', 'drop-4');
+    elem5.classList.add('drop', 'drop-5');
+
+    // append elements to parent
+    drops.appendChild(elem1);
+    drops.appendChild(elem2);
+    drops.appendChild(elem3);
+    drops.appendChild(elem4);
+    drops.appendChild(elem5);
+
+    // grab target element reference
+    const target = document.querySelector('.post-content').parentNode;
+
+    // insert new elements before target
+    target.insertBefore(drops, target.firstChild);
+
+    console.log("fatto")
+</script>
+
+
+<p>
+    Shapes are very usefull when working with glassmorphism/frost effect or when you want to add some decoration to your
+    page. <br>
+    They can add depth to your page and make it more interesting. <br>
+</p>
+
+<h2>HTML code</h2>
+{% highlight html %}
+<div class="drop drop-1"></div>
+<div class="drop drop-2"></div>
+<div class="drop drop-3"></div>
+<div class="drop drop-4"></div>
+<div class="drop drop-5"></div>
+{% endhighlight %}
+<h2>CSS code</h2>
+{% highlight css %}
+<style>
+    .drop {
+        background: linear-gradient(359deg, black, #bf89ff21);
+        backdrop-filter: blur(10px);
+        border-top: 3px solid #47465c;
+        box-shadow: 0px 20px 20px -7px rgb(0 0 0 / 20%);
+        position: absolute;
+        transition: all 0.2s ease;
+        border-radius: 50%;
+        min-width: 15vw;
+        min-height: 15vw;
+    }
+
+    .drop-1 {
+        height: 50vh;
+        width: 50vh;
+        top: 36vh;
+        left: 10vw;
+    }
+
+    .drop-2 {
+        height: 20vh;
+        width: 20vh;
+        bottom: -100vh;
+        right: 8vw;
+    }
+
+    .drop-3 {
+        height: 35vh;
+        width: 35vh;
+        bottom: -50vh;
+        right: 5vw;
+        
+    }
+
+    .drop-4 {
+        height: 20vh;
+        width: 20vh;
+        bottom: -80vh;
+        left: 25vw;
+    }
+
+    .drop-5 {
+        bottom: 1vh;
+        left: 50vw;
+        
+    }
+</style>
+{% endhighlight %}
